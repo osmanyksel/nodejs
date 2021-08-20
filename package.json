@@ -7,9 +7,12 @@
     "start": "nodemon src/npmPaketleri.js"
   },
   "dependencies": {
-    "slugify": "^1.6.0"
+    "nodemailer": "^6.6.3",
+    "slugify": "^1.6.0",
+    "underscore": "^1.13.1"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "nodemon": "1.18.4"
   },
   "keywords": []

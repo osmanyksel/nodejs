@@ -4,9 +4,11 @@
   "description": "Node.js example server starter project",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/module/index.js"
+    "start": "nodemon src/npmPaketleri.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "slugify": "^1.6.0"
+  },
   "devDependencies": {
     "nodemon": "1.18.4"
   },

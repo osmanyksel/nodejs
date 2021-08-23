@@ -6,7 +6,7 @@ const newFile = "src/streams/new.mp4";
 const dosya = "src/streams/dosya.txt";
 
 const readStream = fs.createReadStream(file);
-const writeStream = fs.createWriteStream(newFile);
+//const writeStream = fs.createWriteStream(newFile);
 let progress = 0;
 
 fs.stat(file, (err, data) => {

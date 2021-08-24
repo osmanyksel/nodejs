@@ -10,6 +10,12 @@ app.get("/", (req, res) => {
   // Ayrıca render da gonderdigimiz objeyi pug dosyasında kullanabiliriz.
   res.render("index", { name: "Osman", surname: "Yüksel", job: "developer" });
 });
+app.get("/home", (req, res) => {
+  res.render("home");
+});
+app.get("/concat", (req, res) => {
+  res.render("concat");
+});
 
 app.listen(3001, () => {
   console.log("express server çalıştı.");

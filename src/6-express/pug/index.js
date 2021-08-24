@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 app.get("/home", (req, res) => {
   res.render("home");
 });
-app.get("/concat", (req, res) => {
-  res.render("concat");
+app.get("/contact", (req, res) => {
+  res.render("contact");
 });
 
 app.listen(3001, () => {

@@ -1,4 +1,11 @@
 extends layout
 
+// burada layout dan gelen css ezilir. ve layouttaki css gözükmez. ezilmesini istemiyorsanız başına append eklemeniz lazım.
+block append stylesheet
+      link(rel="stylesheet", href="home.css")
+
 block content 
       | Home Page
+
+block append scripts
+      script(src="home.js")

@@ -2,11 +2,15 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "pug");
+app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
-  res.render("./index");
+  // render ederken views icindeki pug dosyalarını otomatik algılar ama burada algılamıyor.
+  // o yüzden views set ettik.
+  // Ayrıca render da gonderdigimiz objeyi pug dosyasında kullanabiliriz.
+  res.render("index", { name: "Osman", surname: "Yüksel", job: "developer" });
 });
 
-app.listen(3002, () => {
+app.listen(3001, () => {
   console.log("express server çalıştı.");
 });

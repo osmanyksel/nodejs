@@ -3,4 +3,46 @@ html
         title merhaba pug
 
     body
-        |merhaba Pug
+        // burdada gelen değişkenleri aşağıdaki iki şekilde de kullanabilirsiniz.
+        =job
+        br
+        span(style="color:white;background-color:black;")
+            | merhaba #{name}
+        hr
+        br
+        // Burada ise istediğimiz sayfayı basıyoruz.
+        include footer
+        hr
+
+        // değişken tanımlama
+
+        - var okul='Sakarya üniversitesi'
+        - var sehir='Sakarya'
+
+        =okul 
+        br
+        | Bulunduğu şehir #{sehir.toUpperCase()}
+
+        hr
+
+        // if kontrolu
+
+        - var sayi=13;
+
+        if !sayi
+            | sayi değişkeni yok
+        else if sayi===12
+            | sayi 12
+        else
+            | sayi 12 değil
+        
+        hr
+        // donguler
+        ul
+            each val,index in [1,2,3,4,5]
+                li=index+':'+val
+
+
+
+        
+

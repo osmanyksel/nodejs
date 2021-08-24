@@ -4,12 +4,11 @@
   "description": "Node.js example server starter project",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/streams/stream.js"
+    "start": "nodemon src/6-express/pug/index.js"
   },
   "dependencies": {
-    "nodemailer": "^6.6.3",
-    "slugify": "^1.6.0",
-    "underscore": "^1.13.1"
+    "express": "4.17.1",
+    "pug": "3.0.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

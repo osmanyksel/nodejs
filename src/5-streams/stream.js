@@ -18,7 +18,6 @@ fs.stat(file, (err, data) => {
   });
 
   // yazma işlemi
-
   //readStream.pipe(writeStream);
 
   readStream.on("end", () => {

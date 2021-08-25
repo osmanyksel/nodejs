@@ -14,13 +14,19 @@ app
   .get("/ilet+isim", (req, res) => {
     res.send("merhaba express");
   })
-  .post("iletisim", (req, res) => {
+  .post("/iletisim", (req, res) => {
     res.send("iletisim post gonderildi.");
   });
 
 // burası get,post vs. ne gönderirseniz calisacaktir.
 app.all("/all", (req, res) => {
   res.send("all isteği calisti.");
+});
+
+// get parametre vermek
+
+app.get("/users/:id/:postID", (req, res) => {
+  res.send(req.params);
 });
 
 app.listen(3000, () => {

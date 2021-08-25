@@ -7,7 +7,7 @@ const app = express();
   
 */
 
-app.get("/", (req, res) => {
+app.get("/iletisim/", (req, res) => {
   res.send("merhaba express");
 });
 

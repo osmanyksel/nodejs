@@ -20,9 +20,19 @@ app.use("/profile", (req, res, next) => {
 });*/
 
 // helper kullanımı
-
+// bunu sadece profile sayfası icin uyguladığımız icin bunu profile sayfasına yazıdık.
+app.set("view engine", "pug");
 app.use("/user", user);
 app.use("/profile", profile);
+
+// hata yonetimi
+app.use((err, req, res, next) => {
+  res.status(err.status);
+  res.render("error", {
+    message: err.message,
+    status: err.status
+  });
+});
 
 app.listen(3000, () => {
   console.log("express server calisiyor.");

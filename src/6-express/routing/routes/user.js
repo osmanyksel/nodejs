@@ -3,8 +3,13 @@ const router = express.Router();
 
 // router nesnesinin kullanımı
 
-router.get("/signIn", (reg, res) => {
-  res.send("signIn sayfası");
+router.get("/signIn", (reg, res, next) => {
+  const user = false;
+  if (user) {
+    res.send("signIn sayfası");
+  } else {
+    return next({ status: 404, message: "bu kullanıcı bulunamadı." });
+  }
 });
 
 router.post("/signIn", (reg, res) => {

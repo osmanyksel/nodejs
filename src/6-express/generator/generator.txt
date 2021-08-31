@@ -1,0 +1,5 @@
+otomatik olarak express sunucu ayağa kaldırma
+
+npm install express-generator -g 
+npm install
+npm start

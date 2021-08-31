@@ -34,7 +34,8 @@ app.use((err, req, res, next) => {
     status: err.status
   });
 });
-
+/*
 app.listen(3000, () => {
   console.log("express server calisiyor.");
 });
+*/

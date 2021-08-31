@@ -22,6 +22,7 @@ app.use("/profile", (req, res, next) => {
 // helper kullanımı
 // bunu sadece profile sayfası icin uyguladığımız icin bunu profile sayfasına yazıdık.
 app.set("view engine", "pug");
+app.set("views", __dirname + "/views");
 app.use("/user", user);
 app.use("/profile", profile);
 

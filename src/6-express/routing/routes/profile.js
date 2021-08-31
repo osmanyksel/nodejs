@@ -1,7 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (reg, res) => {
+// helper
+
+const isLogin = require("../helper/isLogin");
+
+router.get("/", isLogin, (reg, res) => {
   res.send("profile sayfası");
 });
 
